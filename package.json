@@ -10,6 +10,10 @@
     "jade",
     "mixin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meodai/jade-inline-file.git"
+  },
   "author": "meodai <meodai@gmail.com> (https://github.com/meodai/)",
   "license": "MIT"
 }
