@@ -2,16 +2,30 @@
 
 var fs = require('fs');
 
-module.exports = function (path) {
-  var fileCache = {};
+var modifiers = {};
 
-  if(!fileCache.hasOwnProperty(path)) {
+var renderfile = function(path, options) {
+  var fileCache = {};
+  var options = options || {};
+  var encoding = options.hasOwnProperty('encoding') ? options.encoding : 'utf8';
+
+  if (!fileCache.hasOwnProperty(path)) {
     try {
-      fileCache[path] = fs.readFileSync(path);
+      var fileEnding = path.split('.').pop();
+      if (fileEnding && modifiers.hasOwnProperty(fileEnding)) {
+        fileCache[path] = modifiers[fileEnding](fs.readFileSync(path, encoding));
+      } else {
+        fileCache[path] = fs.readFileSync(path, encoding);
+      }
     } catch (error) {
       console.log('jade inline helper error:', error);
     }
   }
 
   return fileCache[path];
+};
+
+module.exports = function(mods) {
+  modifiers = mods;
+  return renderfile;
 };
