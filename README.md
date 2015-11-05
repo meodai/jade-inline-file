@@ -13,7 +13,7 @@ marked = require('marked');
 jadeInline = require('jade-inline-file')({
     md: marked
 });
-/* makedown files will be parsed with marked before returned */ 
+/* files ending with *.md will be parsed with marked before returned */
 ```
 
 make sure to pass the function to your jade data.
@@ -23,5 +23,5 @@ jade.compile('string of jade', { globals: { helpers: {inline: jadeInline} }});
 ```
 ## Inside a jade file
 ```
-!= jadeInline('somefile.svg')
+!= helpers.inline('somefile.svg')
 ```
