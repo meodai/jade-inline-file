@@ -2,13 +2,16 @@
 
 var fs = require('fs');
 
+// stores the avalible modifiers
 var modifiers = {};
 
+// main render function
 var renderfile = function(path, options) {
   var fileCache = {};
   var options = options || {};
   var encoding = options.hasOwnProperty('encoding') ? options.encoding : 'utf8';
 
+  // don't read the file again if cached already
   if (!fileCache.hasOwnProperty(path)) {
     try {
       var fileEnding = path.split('.').pop();
