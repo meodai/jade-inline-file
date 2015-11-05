@@ -14,5 +14,5 @@ jade.compile('string of jade', { globals: { helpers: {inline: jadeInline} }});
 ```
 ## Inside a jade file
 ```
-!= inline('somefile.svg')
+!= helpers.inline('somefile.svg')
 ```
