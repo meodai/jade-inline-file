@@ -5,9 +5,11 @@ var fs = require('fs');
 // stores the avalible modifiers
 var modifiers = {};
 
+// contains files that have bean read already
+var fileCache = {};
+
 // main render function
 var renderfile = function(path, options) {
-  var fileCache = {};
   var options = options || {};
   var encoding = options.hasOwnProperty('encoding') ? options.encoding : 'utf8';
 
