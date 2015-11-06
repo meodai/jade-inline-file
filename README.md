@@ -1,9 +1,9 @@
-# jade-inline-file
-jade helper that outputs whatever textbased file (html, xml, svg etc..) as a string
+# node-file-to-string
+node helper that outputs whatever textbased file (html, xml, svg etc..) as a string
 
 ## Installation
 ```
-npm install jade-inline-file --save
+npm install node-file-to-string --save
 ```
 
 ## Usage
@@ -11,13 +11,13 @@ npm install jade-inline-file --save
 ### Usage in Node / Gulp / Grunt
 
 ```javascript
-jadeInline = require('jade-inline-file')();
+jadeInline = require('node-file-to-string)();
 ```
 
 #### Make use of loaders
 ```javascript
 marked = require('marked');
-jadeInline = require('jade-inline-file')({
+jadeInline = require('node-file-to-string')({
     md: marked
 });
 /* files ending with *.md will be parsed with marked before returned */
