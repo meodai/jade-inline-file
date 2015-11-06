@@ -1,6 +1,6 @@
 {
   "name": "node-file-to-string",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "jade helper that outputs whatever textbased file as a string",
   "main": "node-file-to-string.js",
   "scripts": {
