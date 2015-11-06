@@ -1,6 +1,6 @@
 {
   "name": "jade-inline-file",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "jade helper that outputs whatever textbased file as a string",
   "main": "helper-jade-inline-file.js",
   "scripts": {
@@ -15,5 +15,10 @@
     "url": "https://github.com/meodai/jade-inline-file.git"
   },
   "author": "meodai <meodai@gmail.com> (https://github.com/meodai/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "marked": "^0.3.5",
+    "node-sass": "^3.4.1"
+  }
 }
