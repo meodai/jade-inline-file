@@ -1,6 +1,6 @@
 var jade = require('jade');
 var marked = require('marked');
-var inlineFile = require('../helper-jade-inline-file')({
+var inlineFile = require('../node-file-to-string')({
   md: marked,
 });
 
