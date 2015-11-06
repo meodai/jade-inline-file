@@ -1,6 +1,6 @@
 var jade = require('jade');
 var marked = require('marked');
-var inlineFile = require('../helper-jade-inline-file')({
+var inlineFile = require('../node-file-to-string')({
   md: marked,
 });
 
@@ -10,7 +10,6 @@ var fs = require('fs');
 console.log('jade',
   jade.compile('div!= inline("../README.md")')({inline: inlineFile})
 );
-
 
 console.log('sass',
   sass.renderSync({
