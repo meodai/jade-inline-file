@@ -11,7 +11,7 @@ npm install node-file-to-string --save
 ### Usage in Node / Gulp / Grunt
 
 ```javascript
-jadeInline = require('node-file-to-string)();
+jadeInline = require('node-file-to-string')();
 ```
 
 #### Make use of transformers
