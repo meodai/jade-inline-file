@@ -1,5 +1,5 @@
 # node-file-to-string
-node helper that outputs whatever textbased file (html, xml, svg etc..) as a string
+node helper that outputs whatever file (html, xml, svg etc..) as a string. Using a cache, and automatic transformers by file-type
 
 ## Installation
 ```
@@ -14,7 +14,7 @@ npm install node-file-to-string --save
 jadeInline = require('node-file-to-string)();
 ```
 
-#### Make use of loaders
+#### Make use of transformers
 ```javascript
 marked = require('marked');
 jadeInline = require('node-file-to-string')({
